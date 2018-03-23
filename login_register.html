@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+Login/Regi page
+</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+<body>
+<h2 style="text-align: center">
+LOGIN/REGISTER DRAFT
+</h2>
+<form style="text-align: center" name="login">
+Username<input style="width:20%;margin-left: auto;margin-right: auto" type="text" name="userid"/> 
+Password<input style="width:20%;margin-left: auto;margin-right: auto" type="password" name="pswrd"/>
+    <p></p>
+<input type="button" onclick="check(this.form)" value="Login"/>
+<input type="reset" value="Cancel"/>
+</form>
+
+<form style="text-align: center" name='register'>
+    <a href="./register.html" class="button">Register</a>
+    <p></p>
+  <a href="./index.html" class="button">home</a>
+
+</form>
+<script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "test" && form.pswrd.value == "test")
+  {
+    window.open(href='./login_successful.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+</body>
+</html>

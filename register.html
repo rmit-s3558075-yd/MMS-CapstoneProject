@@ -1,0 +1,103 @@
+<html>
+ 
+<head>
+ 
+    <title>Registration Form</title>
+ 
+    <script type="text/javascript">
+        function validate_form() {
+            if (document.emp.emp_name.value == "") {
+                alert("Please enter your first name.");
+                return false;
+            }
+            if (document.emp.emp_last_name.value == "") {
+                alert("Enter you last name.");
+                return false;
+            }
+            
+ 
+ 
+ 
+            if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/).test(document.emp.email_id.value)) {
+                alert("You have entered an invalid email address!")
+                return (false)
+            }
+            window.open(href='./register_successful.html');
+        }
+ 
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode != 46 && charCode > 31 &&
+                (charCode < 48 || charCode > 57)) {
+                alert("Enter Number");
+                return false;
+            }
+            return true;
+        }
+        
+        
+        
+ 
+ 
+        //-->
+    </script>
+ <link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+ 
+<body  style="width:40%;margin-left: auto;margin-right: auto" bgcolor="#FFFFFF">
+    <form name="emp" action="" onsubmit="return validate_form();" method="post">
+        <table align="center" width=40% width="100%" cellspacing="2" cellpadding="2" border="5">
+            <tr>
+                <td colspan="2" align="center"><b>Registration Form.</b></td>
+ 
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">First Name<span style="color:red">*</span></td>
+ 
+                <td width="57%"><input type="text" value="" name="emp_name" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Last Name<span style="color:red">*</span></td>
+                <td width="57%"><input type="text" value="" name="emp_last_name" size="24"></td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" width="41%">Address</td>
+ 
+                <td width="57%"><textarea rows="1" maxlen="20" name="S2" cols="20"></textarea></td>
+            </tr> 
+            <tr>
+ 
+            <td align="left" valign="top" width="41%">Contact Number</td>
+            <td width="57%">
+                <input type="text" value="" onkeypress="return isNumberKey(event)" name="txtFName1" size="24"></td>
+            </tr>
+            
+
+            <tr>
+                <td align="left" valign="top" width="41%">Email</td>
+                <td width="57%">
+                    <input type="text" value="" name="email_id" size="24"></td>
+            </tr>
+ 
+            <tr>
+                <td colspan="2">
+                    <p align="center">
+                        <input type="submit" value="  Submit" name="B4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="reset" value="  Reset All   " name="B5"></td>
+                
+            </tr>
+            <tr >
+                <td colspan="2" >
+                <p align="center">
+                    
+                <a  href="./login_register.html" class="button">Back</a>
+                    </p>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+ 
+</html>
